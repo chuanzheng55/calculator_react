@@ -1,0 +1,76 @@
+/* style.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5; /* Optional: background color for the whole page */
+  }
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+    background-color: #0d2c8f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .value {
+    grid-column: span 4;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    text-align: right;
+  }
+  
+  .calculator span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .calculator span:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .clear {
+    grid-column: span 2;
+    background-color: #ffdddd;
+  }
+  
+  .equal {
+    grid-column: span 2;
+    background-color: #ddffdd;
+  }
+  
+  .addition, .substration, .multiplication, .division {
+    background-color: #ddd;
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 400px) {
+    .calculator {
+      max-width: 100%;
+      grid-template-columns: repeat(4, 25%);
+    }
+  
+    .value, .calculator span {
+      font-size: 16px;
+    }
+  }
+  
